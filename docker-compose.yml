@@ -1,0 +1,9 @@
+services:
+  outline-pocketid-connector:
+    image: ghcr.io/libnewton/outline-pocketid-connector:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8430:80
+    env_file: ".env"
